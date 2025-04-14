@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>For My Love</title>
+  <style>
+    body {
+      background-color: #ffe6f0;
+      text-align: center;
+      font-family: 'Arial', sans-serif;
+    }
+    h1 {
+      color: #cc0066;
+      margin-top: 50px;
+    }
+    input, button {
+      padding: 10px;
+      font-size: 16px;
+      margin-top: 20px;
+    }
+    .heart {
+      font-size: 40px;
+      color: red;
+      animation: pulse 1s infinite;
+    }
+    @keyframes pulse {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.2); }
+    }
+  </style>
+  <script>
+    function checkAnswer() {
+      const answer = document.getElementById("answer").value.trim().toLowerCase();
+      const validAnswers = ["maher", "ماهر", "حبيبي", "my love"];
+      if (validAnswers.includes(answer)) {
+        window.location.href = "hbd.html";
+      } else {
+        alert("Nope! Try again, ya 7elwa.");
+      }
+    }
+  </script>
+</head>
+<body>
+  <div class="heart">❤️❤️❤️</div>
+  <h1>وش اسم حبيبك االلي يحبك ويعشقك اللي له طوال عمرة؟</h1>
+  <input type="text" id="answer" placeholder="اكتبي الاسم هنا بيب..." />
+  <br />
+  <button onclick="checkAnswer()">زوط</button>
+</body>
+</html>
